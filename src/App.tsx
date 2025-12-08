@@ -6,7 +6,7 @@
 
 import mjhs from "@/assets/mjhs.png";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import * as XLSX from "xlsx";
 
@@ -134,7 +134,6 @@ export default function App() {
     // shuffle pool to randomize
     const shuffled = pool.sort(() => Math.random() - 0.5);
 
-    let pointer = 0; // simple pointer fallback
 
     for (const r of rooms) {
       for (let b = 1; b <= r.benches; b++) {
